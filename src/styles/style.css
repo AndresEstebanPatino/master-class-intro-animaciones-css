@@ -1,0 +1,109 @@
+.contenedor-prueba{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+
+}
+.contenedor-circulo{
+    width: 60%;
+    height: 100%;
+}
+.contenedor-titulo{
+    height: 100%;
+}
+
+.circulo{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(187, 187, 187);
+    margin-top: 50px;
+    margin-left: 50px;
+
+    animation-name: animando-circulo;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 6s;
+}
+
+
+
+.titulo{
+    margin-left: 300px;
+    margin-top: 200px;
+
+
+}
+
+.titulo:hover{
+    animation-name: animar-titulo;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 2s;
+}
+
+.circulo:hover{
+    animation-play-state: paused;
+}
+
+
+@keyframes animando-circulo {
+    /*Lo que yo haga aquí adentro a a afectar mi elemento animado*/
+    0%{
+        
+    }
+    25%{
+        background-color: blueviolet;
+        transform: translate(100%);
+        width: 250px;
+        height: 250px;
+        border-radius: 40%;
+
+    }
+    50%{
+        background-color: rgb(182, 182, 182);
+        transform: translate(100%, 100%);
+        width: 150px;
+        height: 150px;
+        border-radius: 30%;
+    }
+    75%{
+        background-color: aquamarine;
+        transform: translate(0, 100%);
+        width: 250px;
+        height: 250px;
+        border-radius: 10%;
+    }
+    100%{
+        background-color: rgb(255, 156, 35);
+        border-radius: 0%;
+    }
+}
+
+@keyframes animar-titulo {
+    0%{
+
+    }
+    100%{
+        transform: translateY(100%);
+        font-size: 40px;
+    }
+}
+
+p {
+    animation-duration: 3s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
